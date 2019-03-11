@@ -31,9 +31,6 @@ function createConfig (options) {
       ]
     },
     plugins: [
-      new webpack
-        .optimize
-        .UglifyJsPlugin()
     ]
   }
 }

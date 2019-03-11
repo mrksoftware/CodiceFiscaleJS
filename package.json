@@ -1,11 +1,11 @@
 {
-  "name": "codice-fiscale-js",
-  "version": "2.1.0",
+  "name": "@mrksoftware/codice-fiscale-js",
+  "version": "2.4.0",
   "description": "The Italian Tax Code Library for Javascript and Typescript",
   "main": "dist/codice.fiscale.umd.js",
   "repository": {
     "type": "git",
-    "url": "git://github.com/lucavandro/CodiceFiscaleJS.git"
+    "url": "git://github.com/mrksoftware/CodiceFiscaleJS.git"
   },
   "directories": {
     "test": "tests"
@@ -24,7 +24,7 @@
     "webpack": "^4.20.2"
   },
   "scripts": {
-    "build": "webpack && cp ./dist/codice.fiscale.var.js ./example/",
+    "build": "webpack",
     "clean": "rm ./example/codice.fiscale.var.js",
     "pretest": "npm run build",
     "test": "standard && jest",
@@ -40,5 +40,9 @@
     "ignore": [
       "dist/"
     ]
+  },
+  "dependencies": {
+    "uglifyjs-webpack-plugin": "^2.1.2",
+    "webpack-cli": "^3.2.3"
   }
 }

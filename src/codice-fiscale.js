@@ -97,7 +97,7 @@ class CodiceFiscale {
             name: this.name,
             surname: this.surname,
             gender: this.gender,
-            birthday: this.birthday.getFullYear()+"-"+(("00" + this.birthday.getMonth()).slice(-2))+"-"+(("00" + this.birthday.getDate()).slice(-2)),
+            birthday: this.birthday,
             birthplace: this.birthplace.nome,
             birthplaceProvincia: this.birthplace.prov,
             cf: this.code,
