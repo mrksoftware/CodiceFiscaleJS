@@ -1,6 +1,6 @@
 import { Comune } from './comune';
 import { CHECK_CODE_CHARS, CHECK_CODE_EVEN, CHECK_CODE_ODD, MONTH_CODES, OMOCODIA_TABLE } from './constants';
-import { extractConsonants, extractVowels, getValidDate, birthplaceFields } from './utils';
+import { extractConsonants, extractVowels, getValidDate, birthplaceFields, createDateAsUTC } from './utils';
 
 class CodiceFiscale {
     get day() {
@@ -97,7 +97,7 @@ class CodiceFiscale {
             name: this.name,
             surname: this.surname,
             gender: this.gender,
-            birthday: this.birthday,
+            birthday: createDateAsUTC(this.birthday),
             birthplace: this.birthplace.nome,
             birthplaceProvincia: this.birthplace.prov,
             cf: this.code,
